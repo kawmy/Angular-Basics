@@ -1,14 +1,23 @@
+<!-- This input element triggers the changeImage() method on keyup event and binds the value of imgUrl -->
 <input (keyup)="changeImage($event)" [value]="imgUrl">
+
+<!-- This image element binds the value of imgUrl to the src attribute, displaying the corresponding image -->
 <img [src]="imgUrl">
 
+<!-- This paragraph displays the text "My App" -->
 <p>My App</p>
+
+<!-- This paragraph displays the value of name variable in uppercase using interpolation -->
 <p>name = {{name.toUpperCase()}}</p>
 
+<!-- This paragraph displays the value returned by the getName() method using interpolation -->
 <p>name = {{getName()}}</p>
 
+<!-- This paragraph displays the result of the arithmetic expression 15+15 using interpolation -->
 <p>name = {{15+15}}</p>
 
+<!-- This paragraph displays the text "Post" -->
 <p>Post</p>
-<app-post [postImgUrl]="imgUrl"></app-post>
 
-
+<!-- This custom component app-post is used to display a post with an image, and the imgUrl is passed as an input -->
+<app-post [img]="imgUrl"></app-post>
