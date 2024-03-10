@@ -1,2 +1,15 @@
 <p>post works!</p>
-<img [src]="postImgUrl">
+<!-- FILEPATH: /c:/AngularProjects/FirstProject/basics/src/app/post/post.component.html -->
+
+<!--
+  This code represents an HTML template for the post component.
+  It includes an image element that triggers an event when clicked and displays an image from a specified URL.
+
+  Attributes:
+  - (click): This attribute binds a click event to the image element and emits the postImgUrl value when clicked.
+  - [src]: This attribute binds the postImgUrl value to the src attribute of the image element, displaying the image.
+
+  Example usage:
+  <img (click)="imgSelected.emit(postImgUrl)" [src]="postImgUrl">
+-->
+<img (click)="imgSelected.emit(postImgUrl)" [src]="postImgUrl">

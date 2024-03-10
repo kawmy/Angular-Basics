@@ -20,4 +20,11 @@
 <p>Post</p>
 
 <!-- This custom component app-post is used to display a post with an image, and the imgUrl is passed as an input -->
-<app-post [img]="imgUrl"></app-post>
+<!-- FILEPATH: /c:/AngularProjects/FirstProject/basics/src/app/app.component.html -->
+<!--
+  This code represents the HTML template for the app component.
+  It includes the usage of the custom component 'app-post' with the following attributes:
+  - [img]: Binds the 'imgUrl' property from the component to the 'img' input property of 'app-post'.
+  - (imgSelected): Binds the 'logImg' method from the component to the 'imgSelected' output event of 'app-post'.
+-->
+<app-post [img]="imgUrl" (imgSelected)="logImg($event)"></app-post>

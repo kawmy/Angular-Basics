@@ -16,12 +16,12 @@ export class AppComponent {
   /**
    * The name of the application.
    */
-  name = 'Angular';
+  name: string = 'Angular';
 
   /**
    * The URL of the image.
    */
-  imgUrl = 'https://picsum.photos/id/237/500/500';
+  imgUrl: string = 'https://picsum.photos/id/237/500/500';
 
   /**
    * Returns the name of the application.
@@ -37,5 +37,14 @@ export class AppComponent {
    */
   changeImage(event: KeyboardEvent) {
     this.imgUrl = (event.target as HTMLInputElement).value;
+  }
+
+  /**
+   * Logs the given event to the console.
+   *
+   * @param event - The event to be logged.
+   */
+  logImg(event: string) {
+    console.log(event);
   }
 }
