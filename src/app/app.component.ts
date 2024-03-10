@@ -23,6 +23,24 @@ export class AppComponent {
    */
   imgUrl: string = 'https://picsum.photos/id/237/500/500';
 
+  imgs: string[] = ['https://picsum.photos/id/237/500/500', 'https://picsum.photos/id/237/500/500', 'https://picsum.photos/id/237/500/500'];
+
+  currentDate: Date = new Date();
+  cost: number = 2000;
+  temprature = 26.3;
+
+  pizza = {
+    toppings: ['cheese', 'pepperoni', 'pineapple', 'sausage'],
+    size: 'large'
+  }
+
+  blueClass: boolean = false;
+  fontSize: number = 16;
+
+  buttonStyles = {
+    'background-color': 'red',
+    'color': 'white',
+  };
   /**
    * Returns the name of the application.
    * @returns The name of the application.

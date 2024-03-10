@@ -38,29 +38,59 @@ export class PostComponent implements OnInit, DoCheck, OnChanges, AfterContentCh
     console.log('PostComponent created');
   }
 
+  /**
+   * Initializes the component.
+   */
   ngOnInit(): void {
     console.log('PostComponent initialized');
   }
 
+  /**
+   * Performs change detection on the component.
+   */
   ngDoCheck(): void {
     console.log('PostComponent checked');
   }
 
+  /**
+   * Called when the input properties of the component change.
+   * @param changes - The changes object containing the updated values of the input properties.
+   */
   ngOnChanges(changes: SimpleChanges): void {
     console.log('PostComponent changed', changes);
   }
+
+  /**
+   * Called after the content of the component is checked.
+   */
   ngAfterContentChecked(): void {
     console.log('PostComponent content checked');
   }
+
+  /**
+   * Called after the content of the component is initialized.
+   */
   ngAfterContentInit(): void {
     console.log('PostComponent content initialized');
   }
+
+  /**
+   * Called after the view of the component is checked.
+   */
   ngAfterViewChecked(): void {
     console.log('PostComponent view checked');
   }
+
+  /**
+   * Called after the view of the component is initialized.
+   */
   ngAfterViewInit(): void {
     console.log('PostComponent view initialized');
   }
+
+  /**
+   * Called when the component is about to be destroyed.
+   */
   ngOnDestroy(): void {
     console.log('PostComponent destroyed');
   }
