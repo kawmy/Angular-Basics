@@ -1,4 +1,9 @@
-import { Component, Input, EventEmitter, Output } from '@angular/core';
+import {
+  Component, Input, EventEmitter, Output, OnInit,
+  OnChanges, DoCheck,
+  SimpleChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked,
+  OnDestroy
+} from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -9,7 +14,7 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
 /**
  * Represents a component for displaying a post.
  */
-export class PostComponent {
+export class PostComponent implements OnInit, DoCheck, OnChanges, AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, OnDestroy {
 
   /**
    * The URL of the post image.
@@ -27,4 +32,36 @@ export class PostComponent {
    * @type {EventEmitter<string>}
    */
   @Output() imgSelected = new EventEmitter<string>();
+
+  //lifeCycle Hooks
+  constructor() {
+    console.log('PostComponent created');
+  }
+
+  ngOnInit(): void {
+    console.log('PostComponent initialized');
+  }
+
+  ngDoCheck(): void {
+    console.log('PostComponent checked');
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('PostComponent changed', changes);
+  }
+  ngAfterContentChecked(): void {
+    console.log('PostComponent content checked');
+  }
+  ngAfterContentInit(): void {
+    console.log('PostComponent content initialized');
+  }
+  ngAfterViewChecked(): void {
+    console.log('PostComponent view checked');
+  }
+  ngAfterViewInit(): void {
+    console.log('PostComponent view initialized');
+  }
+  ngOnDestroy(): void {
+    console.log('PostComponent destroyed');
+  }
 }
